@@ -1,0 +1,20 @@
+services:
+
+  db:
+    image: postgres:16
+
+    container_name: ticketing-db
+
+    environment:
+      POSTGRES_DB: ticketing
+      POSTGRES_USER: candidate
+      POSTGRES_PASSWORD: challenge2026
+
+    ports:
+      - "5432:5432"
+
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
